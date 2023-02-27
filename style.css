@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    background-color: white;
+}
+.contenedor{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.empezar{
+    height: 50%;
+    width: 25%;
+    border: solid 1px rgb(192, 188, 188);
+    background-color: rgb(74, 35, 218);
+    border-radius: 20%;
+    font-size: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.empezar:hover{
+    color: rgb(74, 35, 218);
+    background-color: black;
+}
+.ganador{
+    font-size: 30px;
+    color: goldenrod;
+
+}
+.opciones{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    
+}
+.piedra{
+    height: 80%;
+    width: 15%;
+    border: solid 1px rgb(192, 188, 188);
+    border-radius: 20%;
+    background-image: url(./images/rock.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.papel{
+    height: 80%;
+    width: 15%;
+    border: solid 1px rgb(192, 188, 188);
+    border-radius: 20%;
+    background-image: url(./images/paper.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tijera{
+    height: 80%;
+    width: 15%;
+    border: solid 1px rgb(192, 188, 188);
+    border-radius: 20%;
+    background-image: url(./images/scissors.png);
+    background-position: center;
+    background-size: cover;    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ganador2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+.usuario{
+    height: 30%;
+    width: 10%;
+    border: 1px solid;
+    text-align: center;
+    font-size: 150%;
+
+   
+}
+.usuario2{
+    height: 62%;
+    width: 100%;
+    border: 1px solid;
+    background-color: yellow;
+    font-size: 150%;
+}
+.maquina{
+    height: 30%;
+    width: 10%;
+    border: 1px solid;
+    text-align: center;
+    font-size: 150%;
+
+    
+    
+
+}
+.maquina2{
+    height: 62%;
+    width: 100%;
+    border: 1px solid;
+    background-color: yellow;
+    font-size: 150%;
+
+}
+.empate{
+    height: 30%;
+    width: 10%;
+    border: 1px solid;
+    text-align: center;
+    font-size: 150%;
+
+
+}
+.empate2{
+    height: 62%;
+    width: 100%;
+    border: 1px solid;
+    background-color: yellow;
+    font-size: 150%;
+
+
+}

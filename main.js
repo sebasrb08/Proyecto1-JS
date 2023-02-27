@@ -6,8 +6,12 @@ let tijera2=document.getElementById('tijera')
 let usuario2=document.getElementById('usuario')
 let maquina2=document.getElementById('maquina')
 let empate2=document.getElementById('empate')
+let ganador3=document.getElementById('ganador')
+
+
 
 jugar.addEventListener('click',Jugar)
+
 
 
 
@@ -16,101 +20,134 @@ function Jugar(){
     lista=['piedra','papel','tijera']
     contrin =Math.floor(Math.random()*3);
     jugar=parseInt(prompt('Cuantas veces quiere jugar'))
-    document.getElementById('piedra').style.display = 'inline-block';
-    document.getElementById('papel').style.display = 'inline-block';
-    document.getElementById('tijera').style.display = 'inline-block';
- 
+    piedra2.style.display = 'inline-block';
+    papel2.style.display = 'inline-block';
+    tijera2.style.display = 'inline-block';
+    ganador3.innerHTML=''
+    piedra2.addEventListener('click',piedra)
+    papel2.addEventListener('click',papel)
+    tijera2.addEventListener('click',tijera)
     cont=jugar
     contU=0
     contM=0
     contE=0
-    
-        piedra2.addEventListener('click',piedra)
-        papel2.addEventListener('click',papel)
-        tijera2.addEventListener('click',tijera)
+    usuario2=document.getElementById('usuario').innerHTML=contU
+     maquina2=document.getElementById('maquina').innerHTML=contM
+     empate2=document.getElementById('empate').innerHTML=contE
+       
         function piedra() {
             if (lista[contrin]=== 'piedra'){
-                alert('empate,la maquina saco piedra ')
+                ganador3.innerHTML='empate,el contrincate saco piedra'
                 contE++
-                cont--
-                
-
+     
             }else if(lista[contrin]==='tijera'){
-                alert('ganaste,la maquina saco tijera')
+                ganador3.innerHTML='ganaste,el contrincante saco tijera'
                 contU++
-                cont--
-
             }else if(lista[contrin]==='papel'){
-                alert('perdiste,la maquina saco papel ')
+                ganador3.innerHTML='perdiste,el contrincante saco papel'
                 contM++
-                cont--
-
             }
             contrin =Math.floor(Math.random()*3);
-
+            usuario2=document.getElementById('usuario').innerHTML=contU
+            maquina2=document.getElementById('maquina').innerHTML=contM
+            empate2=document.getElementById('empate').innerHTML=contE
+            cont--
       
             if(cont == 0){
-                document.getElementById('piedra').style.display = 'none';
-                document.getElementById('papel').style.display = 'none';
-                document.getElementById('tijera').style.display = 'none';
+                piedra2.style.display = 'none';
+                papel2.style.display = 'none';
+                tijera2.style.display = 'none';
+                if(contU > contM){
+                    document.getElementById('ganador').innerHTML='el ganador es el usuario'
+                }else if(contU <contM){
+                    document.getElementById('ganador').innerHTML='el ganador es la maquina'
+                }else{
+                    document.getElementById('ganador').innerHTML='quedaron empatados'
+
+                }
             }
+            
  
         }  
             function papel(){
             if (lista[contrin]=== 'papel'){
-                alert('empate,la maquina saco papel ')
+                ganador3.innerHTML='empate,el contrincante saco papel'
                 contE++
-                ont--
+
 
             }else if(lista[contrin]==='piedra'){
-                alert('ganaste,la maquina saco piedra')
+                ganador3.innerHTML='ganaste,el contrincante saco piedra'
                 contU++
-                cont--
+
 
             }else if(lista[contrin]==='tijera'){
-                alert('perdiste,la maquina saco tijera ')
+                ganador3.innerHTML='perdiste,el contrincante saco tijera'
                 contM++
-                cont--
+
 
             }
-       
+            usuario2=document.getElementById('usuario').innerHTML=contU
+            maquina2=document.getElementById('maquina').innerHTML=contM
+            empate2=document.getElementById('empate').innerHTML=contE
             contrin =Math.floor(Math.random()*3);
+            cont--
             if(cont == 0){
-                document.getElementById('piedra').style.display = 'none';
-                document.getElementById('papel').style.display = 'none';
-                document.getElementById('tijera').style.display = 'none';
-            }
+                piedra2.style.display = 'none';
+                papel2.style.display = 'none';
+                tijera2.style.display = 'none';
 
+                
+                if(contU > contM){
+                    ganador3.innerHTML='el ganador es el usuario'
+                }else if(contU <contM){
+                    ganador3.innerHTML='el ganador es la maquina'
+                }else{
+                    ganador3.innerHTML='quedaron empatados'
+
+                }
+            }
+            
         }
     
         function tijera(){
             if (lista[contrin]=== 'tijera'){
-                alert('empate,la maquina saco tijera ')
+                ganador3.innerHTML='empate,el contrincante saco tijera'
                 contE++
-                cont--
+               
 
             }else if(lista[contrin]==='papel'){
-                alert('ganaste,la maquina saco papel')
+                ganador3.innerHTML='ganaste,el contrincante saco papel'
                 contU++
-                cont--
+          
 
             }else if(lista[contrin]==='piedra'){
-                alert('perdiste,la maquina saco piedra')
+                ganador3.innerHTML='perdiste,el contrincate saco piedra'
                 contM++
-                cont--
 
             }
-           
+            usuario2=document.getElementById('usuario').innerHTML=contU
+            maquina2=document.getElementById('maquina').innerHTML=contM
+            empate2=document.getElementById('empate').innerHTML=contE
             contrin =Math.floor(Math.random()*3);
+            cont--
             if(cont == 0){
-                document.getElementById('piedra').style.display = 'none';
-                document.getElementById('papel').style.display = 'none';
-                document.getElementById('tijera').style.display = 'none';
+                piedra2.style.display = 'none';
+                papel2.style.display = 'none';
+                tijera2.style.display = 'none';
+
+                if(contU > contM){
+                    ganador3.innerHTML='el ganador es el usuario'
+                }else if(contU <contM){
+                    ganador3.innerHTML='el ganador es la maquina'
+                }else{
+                    ganador3.innerHTML='quedaron empatados'
+
+                }
+
+
             }
         }   
-        
-  
-    
-    
+
+
 }
 
